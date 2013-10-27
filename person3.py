@@ -30,7 +30,7 @@ if __name__ == '__main__':
 	Tony = Manager('Tony Macelli', 'mgr', 50000) #Here we created a new object Tony who is a manager
 	print(Tony.lastName())
 	print(Tony)
-	Tony.giveRaise(.10) #The manager object Tony will be given a normal 10% raise with special 10% manager special
+	Tony.giveRaise(.10) #The manager object Tony will be given a normal 10% raise with the 10% manager special bonus
 	print(Tony)
 	#We will now demonstrate Polymorphism in ACTION
 	print('--All three raises at once!!')
