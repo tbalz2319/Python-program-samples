@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
 class Trip(object):
-	def __init__(self, milePerGallon, distance, pricePerGallon, askName):
+	def __init__(self, milePerGallon, distance, pricePerGallon, askName, x=0):
 		self.milePerGallon = milePerGallon
 		self.distance = distance
 		self.pricePerGallon = pricePerGallon
 		self.askName = askName
+		self.x = x
 
 	def calculated_price_per_gallon(self):
 		return (self.pricePerGallon * self.distance)
@@ -14,7 +15,12 @@ class Trip(object):
 		return (self.distance * 2)
 
 	def say_hi(self):
-		self.askName = raw_input("What is your name?")
+		self.askName = raw_input("What is your name? ")
+		return ("Your name is: " +self.askName)
+
+	def say_bye(self):
+		self.x = "Goodbye " +self.askName
+		return (self.x)
 
 	def read_float(self):
 	#def read_float(self, mpg_text):
@@ -34,3 +40,6 @@ if __name__ == "__main__":
 	print newTrip.milePerGallon
 	print newTrip.distance
 	print newTrip.mass_multiply()
+	print newTrip.say_hi()
+	print newTrip.say_bye()
+
