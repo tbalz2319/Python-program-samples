@@ -25,8 +25,8 @@ class Trip(object):
 	def read_float(self):
 	#def read_float(self, mpg_text):
 		#mpg_text = "Vehicles Advertised Miles Per Gallon: "
-		value = float(raw_input("Please enter: "))
-		print ('is %f') % (value)
+		value = float(raw_input("Please enter a value with decimals: "))
+		return ('is %f') % (value)
 
 	def mass_multiply(self):
 		return (self.distance * self.milePerGallon * self.pricePerGallon)
@@ -42,4 +42,7 @@ if __name__ == "__main__":
 	print newTrip.mass_multiply()
 	print newTrip.say_hi()
 	print newTrip.say_bye()
+	print newTrip.read_float()
+	print newTrip.round_trip()
+
 
